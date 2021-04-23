@@ -47,7 +47,6 @@ class PetContainer extends React.Component {
         .then((res) => res.json())
         .then((resp) => {
           const user = Object.assign({}, this.props.currentUser)
-
           user.pets.push(resp)
           this.state.updateUser(user)
           // }
@@ -63,7 +62,6 @@ class PetContainer extends React.Component {
       alert('Please sign up or log in')
     }
   }
-  // }
 
   render() {
     const { pets } = this.state
